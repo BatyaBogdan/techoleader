@@ -121,7 +121,7 @@ class Main extends CI_Controller {
 			$this->load->model('model_users');
 			$check = $this->model_users->check_login($login);
 			if($check->num_rows() > 0){
-				$this->session->set_flashdata('warning', 'Такой логин существует');
+				$this->session->set_flashdata('warning', 'Такой логин существует!');
 				redirect('main/reg');
 			}
 			else {
